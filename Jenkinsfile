@@ -16,6 +16,7 @@ node {
 
         stage 'Deploy'
 //             sh './deployment/deploy_prod.sh'
+            sh 'pip3 install django'
             sh 'python3 manage.py runserver 8080'
 
         stage 'Publish results'
