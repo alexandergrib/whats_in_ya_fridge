@@ -10,10 +10,14 @@ node {
 
         stage 'Test'
             git 'https://github.com/alexandergrib/testDjango.git'
-//             sh 'pip install virtualenv'
+            sh 'pip install virtualenv'
 //             sh 'PATH=/var/lib/jenkins/.local/bin'
-//             sh 'virtualenv env -p python3.9'
+            sh 'virtualenv env -p python3.9'
 //             sh '. /var/lib/jenkins/.local/bin/activate'
+
+            cd /home/alex/bin
+//             cd .virtualenvs/alex/bin
+            source activate
             sh 'pip install -r requirements.txt'
 //             sh 'env/bin/python3.9 manage.py test --testrunner=djtrump.tests.test_runners.NoDbTestRunner'
 
