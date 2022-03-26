@@ -9,7 +9,7 @@ RUN apt-get update \
 RUN apt-get upgrade --fix-missing -y && apt-get install postgresql gcc python3-dev musl-dev nano -y
 
 
-RUN git clone https://e61e0ed049a36319b118cc445226041096674999:x-oauth-basic@github.com/pioneerko/gradko.git /usr/src/app
+COPY . /usr/src/app
 RUN mkdir /env
 RUN chmod -R 777 /env
 RUN python -m venv /env
@@ -28,5 +28,5 @@ CMD exec python /usr/src/app/gradko/manage.py migrate
 
 EXPOSE 8888
 
-CMD exec gunicorn --bind :8888 --workers 3 gradko.wsgi
+CMD exec gunicorn --bind :8888 --workers 3 testDjango.wsgi
 #CMD exec python /usr/src/app/gradko/manage.py runserver 0.0.0.0:8001
