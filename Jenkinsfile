@@ -1,6 +1,6 @@
 node {
 
-    try {
+//     try {
 //         stage 'Checkout'
 //             checkout scm
 
@@ -8,7 +8,7 @@ node {
 //             def lastChanges = readFile('GIT_CHANGES')
 //             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
-        stage 'Test'
+//         stage 'Test'
 //             git 'https://github.com/alexandergrib/testDjango.git'
 //             sh 'pip install virtualenv'
 // //             sh 'PATH=/var/lib/jenkins/.local/bin'
@@ -21,7 +21,7 @@ node {
 //             sh 'pip install -r requirements.txt'
 //             sh 'env/bin/python3.9 manage.py test --testrunner=djtrump.tests.test_runners.NoDbTestRunner'
 
-        stage 'Deploy'
+//         stage 'Deploy'
 //                sh  'docker run hello-world'
 //             sh './deployment/deploy_prod.sh'
 //             sh 'pip3 install django'
@@ -44,10 +44,10 @@ node {
     }
     }
 
-    catch (err) {
-//         slackSend color: "danger", message: "Build failed :face_with_head_bandage: \n`${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
-
-        throw err
-    }
+//     catch (err) {
+// //         slackSend color: "danger", message: "Build failed :face_with_head_bandage: \n`${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
+//
+//         throw err
+//     }
 
 }
