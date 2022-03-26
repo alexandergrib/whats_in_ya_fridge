@@ -18,10 +18,10 @@ node {
 //             sh './deployment/deploy_prod.sh'
 //             sh 'pip3 install django'
 //             sh 'python3 manage.py runserver 8080'
-               sh 'gunicorn testDjango.wsgi:application \\
+               sh '''gunicorn testDjango.wsgi:application \\
                    --bind 0.0.0.0:8082 \\
                    --workers 1 \\
-                   --daemon'
+                   --daemon'''
 
 //         stage 'Publish results'
 //             slackSend color: "good", message: "Build successful: `${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
