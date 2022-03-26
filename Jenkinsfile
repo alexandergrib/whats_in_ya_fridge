@@ -2,13 +2,13 @@ pipeline {
     agent {
         docker { image 'hello-world' }
     }
-    stages {
-        stage('Test') {
-            steps {
-//                 sh 'node --version'
-                    sh '''echo "hello"
-                    '''
-            }
-        }
-    }
+//     stages {
+//         stage('Test') {
+//             steps {
+// //                 sh 'node --version'
+//                     sh '''echo "hello"
+//                     '''
+//             }
+//         }
+//     }
 }
