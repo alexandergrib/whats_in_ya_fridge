@@ -11,6 +11,7 @@ node {
         stage 'Test'
             git 'https://github.com/alexandergrib/testDjango.git'
             sh 'pip install virtualenv'
+            sh 'PATH=/var/lib/jenkins/.local/bin'
             sh 'virtualenv env -p python3.9'
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt'
