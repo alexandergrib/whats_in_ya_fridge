@@ -6,7 +6,8 @@ pipeline {
         stage('Test') {
             steps {
 //                 sh 'node --version'
-                    echo 'hello'
+                    sh '''echo "hello"
+                    '''
             }
         }
     }
