@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+#  gradko-db:
+#    image: postgres:12
+#
+#    restart: unless-stopped
+#
+#    volumes:
+#      - gradko_postgres_data:/var/lib/postgresql/data/
+#    env_file:
+#      - ./env.dev
+#    ports:
+#      - 5432:5432
+  gradko_back:
+    build: ./
+    restart: unless-stopped
+
+#    depends_on:
+#      - gradko-db
+#    command: python /usr/src/app/gradko/manage.py runserver 0.0.0.0:8001
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 8888:8888
+#    env_file:
+#      - ./env.dev
+
+
+
+volumes:
+  gradko_postgres_data:
