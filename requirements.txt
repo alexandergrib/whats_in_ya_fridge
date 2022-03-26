@@ -1,3 +1,3 @@
 Django==3.2.9
-uwsgi >= 0
-gunicorn >=0
+uwsgi>=0
+gunicorn==20.1.0
