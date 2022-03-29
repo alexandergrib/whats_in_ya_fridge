@@ -13,7 +13,7 @@ services:
 #    ports:
 #      - 5432:5432
   gradko_back:
-    build: ./
+    build: .
     restart: unless-stopped
 
 #    depends_on:
@@ -27,6 +27,6 @@ services:
 #      - ./env.dev
 #
 
-
-volumes:
-  gradko_postgres_data:
+#
+#volumes:
+#  gradko_postgres_data:
