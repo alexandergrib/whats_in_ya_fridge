@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", '')
 DEBUG = os.environ.get("debug", False)
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['http://51.38.65.106']
 
 # Application definition
 
