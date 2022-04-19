@@ -8,8 +8,8 @@ services:
 #
 #    volumes:
 #      - gradko_postgres_data:/var/lib/postgresql/data/
-    env_file:
-      - /home/ubuntu/webhooks/scripts/.env.dev
+#    env_file:
+#      - /home/ubuntu/webhooks/scripts/.env.dev
 #    ports:
 #      - 5432:5432
   django_back:
@@ -21,6 +21,8 @@ services:
 #      - PG_PASSWORD
 #      - PG_SERVER
 #      - PG_PORT
+    env_file:
+          - /home/ubuntu/webhooks/scripts/.env.dev
     restart: unless-stopped
 
 #    depends_on:
