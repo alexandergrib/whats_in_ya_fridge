@@ -1,5 +1,5 @@
 version: '3.7'
-
+#test
 services:
 #  gradko-db:
 #    image: postgres:12
@@ -14,13 +14,13 @@ services:
 #      - 5432:5432
   django_back:
     build: .
-    secrets:
-      - SECRET_KEY
-      - PG_NAME
-      - PG_USR
-      - PG_PASSWORD
-      - PG_SERVER
-      - PG_PORT
+#    secrets:
+#      - SECRET_KEY
+#      - PG_NAME
+#      - PG_USR
+#      - PG_PASSWORD
+#      - PG_SERVER
+#      - PG_PORT
     restart: unless-stopped
 
 #    depends_on:
